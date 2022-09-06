@@ -1,0 +1,17 @@
+type UsersMutations {
+    signupUser(data: UserCreateInput!) : AuthPayLoad!
+    loginUser(data: UserLoginInput!): AuthPayLoad!
+}
+
+input UserCreateInput {
+  email: String!
+  name: String!
+  password: String!
+}
+input UserLoginInput {
+  email: String!
+  password: String!
+}
+type AuthPayLoad {
+  token: String!
+}

@@ -1,0 +1,16 @@
+scalar Date
+
+type ScanResults {
+  id: ID!
+  image: String
+  response: String
+  error: String
+  # scanStartTime: Date
+}
+
+# The "Query" type is special: it lists all of the available queries that
+# clients can execute, along with the return type for each.
+type Query {
+  getScans: [ID!]
+  getScanResults(id: ID!): ScanResults
+}

@@ -1,0 +1,10 @@
+type Mutation {
+    # users: UsersMutations
+    scan(data: ScanInput!): ID!
+}
+
+input ScanInput {
+  image: String
+  format: String #todo: enum
+}
+
