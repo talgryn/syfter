@@ -28,7 +28,7 @@ const run = async () => {
   await consumer.connect();
   await consumer.subscribe({
     topic: process.env.KAFKA_TOPIC_NAME,
-    fromBeginning: true,
+    fromBeginning: false
   });
 
   await consumer.run({
