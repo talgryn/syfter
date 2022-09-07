@@ -32,7 +32,7 @@ export default class TrackerDS extends HTTPDataSource{
     }
 
     async getScanResults(id) {
-        const resp = await this.get(`/api/scans/${id}`)
+        const resp = await this.get(`/api/scans/${id}?${Math.random()}`)
         resp.body.id = resp.body._id
         return resp.body
     }

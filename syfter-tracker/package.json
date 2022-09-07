@@ -12,10 +12,12 @@
   "author": "Tal Grynbaum",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.0",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "kafkajs": "^2.2.0",
-    "mongoose": "^6.5.4"
+    "mongoose": "^6.5.4",
+    "nocache": "^3.0.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"

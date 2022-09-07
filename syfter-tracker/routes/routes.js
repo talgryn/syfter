@@ -42,4 +42,11 @@ router.post('/scans', async (req, res) => {
     res.send({message: 'success', id: dbres.insertedId})
 })
 
+router.put('/scans/:id', async (req, res) => {
+  console.log(`put body: ${req.body}`)
+  let dbres = await scans.replaceOne({_id: ObjectId(req.params.id || req.body.id)},req.body)
+  console.log(`res: ${dbres}`)
+  res.send({message: 'success', id: dbres.insertedId})
+})
+
 export default router

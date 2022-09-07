@@ -19,8 +19,8 @@ export const createServer = async (ctxFunc) => {
   const kafkaDS = new KafkaDS()
   await kafkaDS.init()
   const baseURL = `http://${process.env.TRACKER_SYFTER_TRACKER_SERVICE_HOST}:${process.env.TRACKER_SYFTER_TRACKER_SERVICE_PORT}`
-  const pool = new Pool(baseURL)
-  const trackerDS = new TrackerDS(baseURL, pool)
+  // const pool = new Pool(baseURL)
+  const trackerDS = new TrackerDS(baseURL, null)
   // const users = new Users(mongoose)
   // const players = new Players(mongoose)
   // const teams = new Teams(mongoose)

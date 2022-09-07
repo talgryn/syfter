@@ -5,6 +5,7 @@ type ScanResults {
   image: String
   response: String
   error: String
+  status: String
   # scanStartTime: Date
 }
 
