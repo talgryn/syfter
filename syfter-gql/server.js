@@ -16,9 +16,10 @@ export const createServer = async (ctxFunc) => {
     typeDefs,
     resolvers: Resolvers,
   })
+  console.log(`JWT_SECRET: ${process.env.JWT_SECRET}`)
   const kafkaDS = new KafkaDS()
   await kafkaDS.init()
-  const baseURL = `http://${process.env.TRACKER_SYFTER_TRACKER_SERVICE_HOST}:${process.env.TRACKER_SYFTER_TRACKER_SERVICE_PORT}`
+  const baseURL = `http://${process.env.SYFTER_TRACKER_SERVICE_HOST}:${process.env.SYFTER_TRACKER_SERVICE_PORT}`
   // const pool = new Pool(baseURL)
   const trackerDS = new TrackerDS(baseURL, null)
   // const users = new Users(mongoose)

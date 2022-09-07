@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-configmap
+data:
+  MONGODB_URL: "mongodb+srv://tal:taltal4321@cluster0.3yu4pyc.mongodb.net/test"

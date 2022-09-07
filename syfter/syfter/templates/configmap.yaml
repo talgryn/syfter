@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: mychart-configmap
-data:
-  broker1: "my-cluster-kafka-bootstrap:9092"
-  # groupId: "front1"
-  # clientId: "front1c"

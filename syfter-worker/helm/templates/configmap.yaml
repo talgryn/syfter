@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-configmap
+data:
+  KAFKA_BROKER_1: "my-cluster-kafka-bootstrap:9092"
+  KAFKA_GROUP_ID: "workers"
+  KAFKA_CLIENT_ID: "workers-client"
+  KAFKA_TOPIC_NAME: "SBOM_requests"
+  PARTITIONS_CONSUMED_CONCURRENTLY: "5"
+  # groupId: "front1"
+  # clientId: "front1c"

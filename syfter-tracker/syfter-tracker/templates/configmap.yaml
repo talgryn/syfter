@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: tracker-configmap
-data:
-  MONGODB_URL2: "mongodb://10.102.170.59:27017"
-  MONGODB_URL: "mongodb+srv://tal:taltal4321@cluster0.3yu4pyc.mongodb.net/test"
-  # groupId: "front1"
-  # clientId: "front1c"
